@@ -1,9 +1,10 @@
+import Navbar from "./layout/navbar/Navbar";
 
 
 function App() {
   return (
-    <div className="container">
-      hello
+    <div className="">
+      <Navbar />
     </div>
   );
 }
