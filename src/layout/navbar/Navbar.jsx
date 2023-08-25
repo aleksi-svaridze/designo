@@ -3,7 +3,7 @@ import BurgerIcon from '../../images/navbar/burger_menu.svg';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-md py-5 my-3">
+        <nav className="navbar navbar-expand-md py-4 my-2 py-md-5 my-md-3">
             <div className="container">
                 <a className="navbar-brand" href="/">
                     <img src={LogoBlack} alt="" />
