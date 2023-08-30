@@ -1,0 +1,22 @@
+.footer__link {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 2px;
+}
+.footer-heading {
+    font-size: 16px;
+    line-height: 26px; /* 162.5% */
+    opacity: 0.5;
+}
+.footer-desc {
+    opacity: 0.5;
+    font-size: 16px;
+    line-height: 26px;
+}
+.icons {
+    fill: #E7816B;
+
+    &:hover {
+        fill: #ffad9b;
+    }
+}

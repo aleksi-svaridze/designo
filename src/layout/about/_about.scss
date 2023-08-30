@@ -1,3 +1,10 @@
+.about-container {
+    margin-bottom: 280px;
+
+    @media screen and (min-width: 992px) {
+        margin-bottom: 300px;
+    }
+}
 .about-card {
     margin-bottom: 80px;
     

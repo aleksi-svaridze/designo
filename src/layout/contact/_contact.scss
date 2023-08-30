@@ -1,7 +1,10 @@
 .contact-card {
     padding: 57px 24px;
     border-radius: 15px;
-    width: 90%;
+
+    &--container {
+        top: -300px;
+    }
 
     &--title {
         max-width: 279px;
@@ -34,6 +37,10 @@
     @media screen and (min-width: 992px) {
         padding: 72px 95px;
 
+        &--container {
+            top: -210px;
+        }
+
         &--title {
             max-width: 268px;
             margin-left: 0;
@@ -43,9 +50,5 @@
         &--desc {
             max-width: 460px;
         }
-    }
-
-    @media screen and (min-width: 1200px) {
-        width: 1111px;
     }
 }
