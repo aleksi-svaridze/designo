@@ -5,12 +5,13 @@
 @import './utilities/colors';
 
 @import './components/button';
-@import './components//circles';
+@import './components/circles';
 
-@import './../../layout//navbar/navbar';
+@import './../../layout/navbar/navbar';
 @import './../../layout/hero/hero';
 @import './../../layout/portfolio/portfolio';
 @import './../../layout/about/about';
+@import './../../layout/contact/contact';
 
 body {
     font: {

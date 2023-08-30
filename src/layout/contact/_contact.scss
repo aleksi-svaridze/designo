@@ -1,0 +1,20 @@
+.contact-card {
+
+    @media screen and (min-width: 1200px) {
+        padding: 72px 95px;
+        border-radius: 15px;
+        width: 1111px;
+
+        &--title {
+            max-width: 268px;
+            font-size: 40px;
+            line-height: 40px;
+        }
+
+        &--desc {
+            font-size: 16px;
+            line-height: 26px;
+            max-width: 460px;
+        }
+    }
+}
