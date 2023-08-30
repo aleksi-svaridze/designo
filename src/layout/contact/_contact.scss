@@ -1,20 +1,51 @@
 .contact-card {
+    padding: 57px 24px;
+    border-radius: 15px;
+    width: 90%;
 
-    @media screen and (min-width: 1200px) {
-        padding: 72px 95px;
-        border-radius: 15px;
-        width: 1111px;
+    &--title {
+        max-width: 279px;
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    &--desc {
+        font-size: 15px;
+        line-height: 25px;
+        max-width: 279px;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 72px 120px;
 
         &--title {
-            max-width: 268px;
             font-size: 40px;
             line-height: 40px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         &--desc {
             font-size: 16px;
             line-height: 26px;
+            max-width: 500px;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        padding: 72px 95px;
+
+        &--title {
+            max-width: 268px;
+            margin-left: 0;
+            margin-right: initial;
+        }
+
+        &--desc {
             max-width: 460px;
         }
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1111px;
     }
 }
