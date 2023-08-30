@@ -1,6 +1,19 @@
 .card-portfolio {
     border-radius: 15px;
     height: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &--img-1 {
+        background-image: url(../../images/portfolio/cover_1.png);
+    }
+    &--img-2 {
+        background-image: url(../../images/portfolio/cover_2.png);
+    }
+    &--img-3 {
+        background-image: url(../../images/portfolio/cover_3.png);
+    }
 
     &__text-content {
 
@@ -36,11 +49,6 @@
         transition: all .2s;
     }
 
-    &__img {
-        // height: 100%;
-        width: 100%;
-    }
-
     &:hover .overlay {
         background-color: rgba(#E7816B, .8);
     }
@@ -50,6 +58,28 @@
     }
 
     @media screen and (min-width: 992px) {
-        height: auto;
+        &--img-1 {
+            background-image: url(../../images/portfolio/cover_1.png);
+            height: 100%;
+        }
+        &--img-2 {
+            background-image: url(../../images/portfolio/cover_2.png);
+            height: 310px;
+        }
+        &--img-3 {
+            background-image: url(../../images/portfolio/cover_3.png);
+            height: 310px;
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        &--img-2 {
+            background-image: url(../../images/portfolio/cover_2.png);
+            height: 330px;
+        }
+        &--img-3 {
+            background-image: url(../../images/portfolio/cover_3.png);
+            height: 330px;
+        }
     }
 }
