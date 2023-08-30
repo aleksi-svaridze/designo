@@ -1,8 +1,10 @@
 
 
-const Circles = ({styles}) => {
+const Circles = ({styles, degree, startColor, startColorOpacity, endColor, endColorOpacity}) => {
     return(
-        <div className={`${styles}`} style={{backgroundImage: `linear-gradient(90deg, rgba(93, 2, 2, 0.00) 0%, rgba(93, 2, 2, 0.50) 100%)`}}></div>
+        <div 
+            className={`${styles}`} 
+            style={{backgroundImage: `linear-gradient(${degree}, ${startColor} ${startColorOpacity}, ${endColor} ${endColorOpacity})`}}></div>
     )
 }
 

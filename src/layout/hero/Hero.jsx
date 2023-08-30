@@ -6,7 +6,14 @@ const Hero = () => {
     return(
         <div className="container">
             <div className="hero bg-primary row overflow-hidden position-relative">
-                <Circles styles={'hero_circle rounded-circle position-absolute'} />
+                <Circles 
+                    styles={'hero_circle rounded-circle position-absolute'}
+                    degree={'90deg'}
+                    startColor={'rgba(93, 2, 2, 0.00)'}
+                    startColorOpacity={'0%'}
+                    endColor={'rgba(93, 2, 2, 0.50)'}
+                    endColorOpacity={'100%'}
+                />
 
                 <div className="col-12 col-lg-6">
                     <div className='hero__text-content text-center text-lg-start position-relative'>
