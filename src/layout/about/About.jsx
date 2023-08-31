@@ -1,4 +1,5 @@
 import AboutCard from "../../components/cards/AboutCard";
+import Rect from "../../components/rect/Rect";
 
 import image1 from '../../images/about/passionate.png'
 import image2 from '../../images/about/resourceful.png'
@@ -13,14 +14,19 @@ const AboutUs = () => {
         {id: 3, img: image3, title: 'FRIENDLY', desc: ' We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.'},
     ]
     return(
-        <div className="container about-container">
-            <div className="row">
-                {aboutUsData.map(item => (
-                    <AboutCard id={item.id} img={item.img} title={item.title} desc={item.desc} />
-                ))}
+        <div className="position-relative" style={{maxWidth: '1600px', margin: '0 auto'}}>
+            <div className="container about-container">
+                <div className="row">
+                    {aboutUsData.map(item => (
+                        <AboutCard id={item.id} img={item.img} title={item.title} desc={item.desc} />
+                    ))}
+                </div>
             </div>
+
+            <Rect styles={'rect rect-right position-absolute bg-gray-light d-none d-xl-block'} />
         </div>
     )
 }
+// d-none d-lg-block d-xxl-none
 
 export default AboutUs;
