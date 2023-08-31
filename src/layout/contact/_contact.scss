@@ -52,3 +52,88 @@
         }
     }
 }
+.contact-circles {
+    width: 292px;
+    height: 292px;
+    opacity: .3;
+
+    &--top {
+        top: -30%;
+
+        &--1 {
+            right: -10%;
+        }
+        &--2 {
+            right: 292px;
+            display: none;
+        }
+    }
+    &--bottom {
+        bottom: -30%;
+
+        &--1 {
+            right: 0;
+        }
+        &--2 {
+            right: 292px;
+        }
+        &--3 {
+            right: 584px;
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &--top {
+            top: -27%;
+    
+            &--1 {
+                right: -92px;
+            }
+            &--2 {
+                right: 200px;
+                display: block;
+            }
+        }
+        &--bottom {
+            bottom: -26.5%;
+    
+            &--1 {
+                right: -92px;
+            }
+            &--2 {
+                right: 200px;
+            }
+            &--3 {
+                right: 492px;
+                display: block;
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        &--top {
+            top: -50%;
+    
+            &--1 {
+                right: 0;
+            }
+            &--2 {
+                right: 292px;
+            }
+        }
+        &--bottom {
+            bottom: -50%;
+    
+            &--1 {
+                right: 0;
+            }
+            &--2 {
+                right: 292px;
+            }
+            &--3 {
+                right: 584px;
+            }
+        }
+    }
+}
