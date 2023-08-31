@@ -5,9 +5,17 @@ import { ReactComponent as YoutubeIcon } from '../../images/footer/youtube_icon.
 import { ReactComponent as TwitterIcon } from '../../images/footer/twitter_icon.svg'
 import { ReactComponent as PinterestIcon } from '../../images/footer/pinterest_icon.svg'
 import { ReactComponent as InstagramIcon } from '../../images/footer/instagram_icon.svg'
+import SocIcons from '../../components/social-icons/SocialIcons';
 
 
 const Footer = () => {
+    let socIconData = [
+        {id: 1, icon: FacebookIcon, path: '/facebook'},
+        {id: 2, icon: YoutubeIcon, path: '/youtube'},
+        {id: 3, icon: TwitterIcon, path: '/twitter'},
+        {id: 4, icon: PinterestIcon, path: '/pinterest'},
+        {id: 5, icon: InstagramIcon, path: '/instagram'}
+    ]
     return(
         <footer className="bg-black position-relative pb-5">
             <Contact />
@@ -32,7 +40,7 @@ const Footer = () => {
                 <div className="row pt-4 pt-md-3">
 
                     <div className="col-12 col-md-4">
-                        <div>
+                        <div className='d-flex flex-column align-items-center d-md-block pb-4 pb-md-0'>
                             <h3 className='text-white fw-bold footer-heading mb-0'>Designo Central Office</h3>
                             <address className=''>
                                 <p className='mb-0 footer-desc text-white'>3886 Wellington Street</p>
@@ -42,7 +50,7 @@ const Footer = () => {
                     </div>
 
                     <div className="col-12 col-md-4">
-                        <div>
+                        <div className='d-flex flex-column align-items-center d-md-block pb-4 pb-md-0'>
                             <h3 className='text-white fw-bold footer-heading mb-0'>Contact Us (Central Office)</h3>
                             <address className=''>
                                 <p className='mb-0 footer-heading fw-bold text-white'>P&nbsp;: <a className='footer-heading fw-bold text-white text-decoration-none' href="tel:+12538638967">+1 253-863-8967</a></p>
@@ -52,24 +60,13 @@ const Footer = () => {
                     </div>
 
                     <div className="col-12 col-md-4">
-                        <div className=''>
-                            <div className='d-flex column-gap-3'>
-                                <a href="/">
-                                    <FacebookIcon className='icons' />
-                                </a>
-                                <a href="/">
-                                    <YoutubeIcon className='icons' />
-                                </a>
-                                <a href="/">
-                                    <TwitterIcon className='icons' />
-                                </a>
-                                <a href="/">
-                                    <PinterestIcon className='icons' />
-                                </a>
-                                <a href="/">
-                                    <InstagramIcon className='icons' />
-                                </a>
-                            </div>
+
+                        <div className='d-flex h-100 w-100 pb-4'>                           
+                            <SocIcons 
+                                data={socIconData}
+                                wrapperStyles={'d-flex column-gap-3 social-icons social-icons--position'}
+                                iconStyles={'icons'}
+                            />
                         </div>
                     </div>
                 </div>
