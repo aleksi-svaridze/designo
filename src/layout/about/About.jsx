@@ -1,4 +1,4 @@
-import AboutCard from "../../components/cards/AboutCard";
+import { AboutCard } from "../../components/cards/Cards";
 import Rect from "../../components/rect/Rect";
 
 import image1 from '../../images/about/passionate.png'
@@ -27,6 +27,5 @@ const AboutUs = () => {
         </div>
     )
 }
-// d-none d-lg-block d-xxl-none
 
 export default AboutUs;

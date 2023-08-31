@@ -13,6 +13,9 @@
 .text-secondary {
     color: $color-peach-light !important;
 }
+.text-tertiary {
+    color: $color-peach-light-extra;
+}
 
 .bg-gray-dark {
     background-color: $color-gray-dark !important;
@@ -28,4 +31,7 @@
 }
 .bg-secondary {
     background-color: $color-peach-light !important;
+}
+.bg-tertiary {
+    background-color: $color-peach-light-extra;
 }

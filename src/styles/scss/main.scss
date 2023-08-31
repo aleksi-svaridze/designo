@@ -8,12 +8,13 @@
 @import './components/circles';
 @import './components/social-icons';
 @import './components/rect';
+@import './components/cards';
 
 @import './../../layout/navbar/navbar';
 @import './../../layout/hero/hero';
+@import './../../layout/worksCardContainer/works-card-container';
 @import './../../layout/portfolio/portfolio';
 @import './../../layout/about/about';
-@import './../../layout/contact/contact';
 @import './../../layout/footer/footer';
 
 body {

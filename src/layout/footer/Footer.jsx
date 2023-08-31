@@ -1,4 +1,3 @@
-import Contact from '../contact/Contact';
 import logoWhite from '../../images/footer/logo_white.svg'
 import { ReactComponent as FacebookIcon }  from '../../images/footer/facebook_icon.svg'
 import { ReactComponent as YoutubeIcon } from '../../images/footer/youtube_icon.svg'
@@ -6,6 +5,7 @@ import { ReactComponent as TwitterIcon } from '../../images/footer/twitter_icon.
 import { ReactComponent as PinterestIcon } from '../../images/footer/pinterest_icon.svg'
 import { ReactComponent as InstagramIcon } from '../../images/footer/instagram_icon.svg'
 import SocIcons from '../../components/social-icons/SocialIcons';
+import { ContactCard } from '../../components/cards/Cards';
 
 
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
     ]
     return(
         <footer className="bg-black position-relative pb-5">
-            <Contact />
+            <ContactCard />
             <div className="container pt-5">
                 <div className="row pt-5 pb-md-3">
                     <div className="col-12 col-md-5 text-center text-md-start pt-5">
