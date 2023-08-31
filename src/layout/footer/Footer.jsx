@@ -21,7 +21,7 @@ const Footer = () => {
             <Contact />
             <div className="container pt-5">
                 <div className="row pt-5 pb-md-3">
-                    <div className="col-12 col-md-5 text-center text-lg-start pt-5">
+                    <div className="col-12 col-md-5 text-center text-md-start pt-5">
                         <img src={logoWhite} alt="" className='pt-md-5 pt-3 pb-3 pb-md-0 pb-4 pb-md-0 mb-2 mb-md-0' />
                         <div className="border-opacity-10 border-bottom border-white d-block d-md-none"></div>
                     </div>
@@ -41,20 +41,20 @@ const Footer = () => {
 
                     <div className="col-12 col-md-4">
                         <div className='d-flex flex-column align-items-center d-md-block pb-4 pb-md-0'>
-                            <h3 className='text-white fw-bold footer-heading mb-0'>Designo Central Office</h3>
+                            <h3 className='text-white fw-bold footer-heading opacity-50 mb-0'>Designo Central Office</h3>
                             <address className=''>
-                                <p className='mb-0 footer-desc text-white'>3886 Wellington Street</p>
-                                <p className='mb-0 footer-desc text-white'>Toronto, Ontario M9C 3J5</p>
+                                <p className='mb-0 footer-desc opacity-50 text-white'>3886 Wellington Street</p>
+                                <p className='mb-0 footer-desc opacity-50 text-white'>Toronto, Ontario M9C 3J5</p>
                             </address>
                         </div>
                     </div>
 
                     <div className="col-12 col-md-4">
                         <div className='d-flex flex-column align-items-center d-md-block pb-4 pb-md-0'>
-                            <h3 className='text-white fw-bold footer-heading mb-0'>Contact Us (Central Office)</h3>
+                            <h3 className='text-white fw-bold footer-heading opacity-50 mb-0'>Contact Us (Central Office)</h3>
                             <address className=''>
-                                <p className='mb-0 footer-heading fw-bold text-white'>P&nbsp;: <a className='footer-heading fw-bold text-white text-decoration-none' href="tel:+12538638967">+1 253-863-8967</a></p>
-                                <p className='mb-0 footer-heading fw-bold text-white'>M&nbsp;: <a href="mailto:contact@designo.co" className='footer-heading fw-bold text-white text-decoration-none'>contact@designo.co</a></p>
+                                <p className='mb-0 footer-heading opacity-50 fw-bold text-white'>P&nbsp;: <a className='footer-heading fw-bold text-white text-decoration-none' href="tel:+12538638967">+1 253-863-8967</a></p>
+                                <p className='mb-0 footer-heading opacity-50 fw-bold text-white'>M&nbsp;: <a href="mailto:contact@designo.co" className='footer-heading fw-bold text-white text-decoration-none'>contact@designo.co</a></p>
                             </address>
                         </div>
                     </div>
