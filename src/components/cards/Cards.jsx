@@ -1,5 +1,7 @@
 import Button from '../buttons/Button'
 import Circles from '../circles/Circles';
+import {Link} from 'react-router-dom'
+import arrowIcon from '../../images/portfolio/arrow_icon.svg'
 
 export const ContactCard = () => {
     return(
@@ -136,6 +138,22 @@ export const WorksCard = ({img, id, desc, title}) => {
                 <div className="works-card--text-content d-flex flex-column align-items-center justify-content-center text-center">
                     <h2 className='works-card--title fw-medium text-uppercase'>{title}</h2>
                     <p className='works-card--desc m-0'>{desc}</p>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export const PortfolioMiniCards = ({title, path, img, id}) => {
+    return(
+        <div className="col-12 col-md-6" key={id}>
+            <div style={{backgroungImage: `url(${img})`}} className="card-portfolio card-portfolio--img-2 overflow-hidden position-relative">
+                <div className="overlay"></div>
+                <div className="card-portfolio__text-content position-absolute start-50 top-50 translate-middle text-center w-100">
+                    <h2 className='card-portfolio__text-content--title text-white fw-medium text-uppercase mb-2 pb-1 mb-lg-4'>APP DESIGN{title}</h2>
+                    <Link to={{path}} className='card-portfolio__text-content--btn text-uppercase text-white fw-medium text-decoration-none d-flex align-items-center justify-content-center column-gap-3'>VIEW PROJECTS
+                        <img src={arrowIcon} alt="" />
+                    </Link>
                 </div>
             </div>
         </div>
