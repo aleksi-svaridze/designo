@@ -299,17 +299,22 @@
 .works-card {
     border-radius: 15px;
     margin-bottom: 40px;
+    cursor: pointer;
 
     &--title {
         font-size: 20px;
         line-height: 26px;
         letter-spacing: 5px;
         margin-bottom: 16px;
+        color: #E7816B;
+        transition: all .2s;
     }
 
     &--desc {
         font-size: 16px;
         line-height: 26px;
+        color: #333136;
+        transition: all .2s;
     }
 
     &--img-content {
@@ -323,6 +328,8 @@
     &--text-content {
         padding: 32px 30px;
         width: 100%;
+        background-color: #FDF3F0;
+        transition: all .2s;
     }
 
     @media screen and (min-width: 576px) {
@@ -359,5 +366,15 @@
             padding: 32px;
             width: 100%;
         }
+    }
+
+    &:hover &--text-content {
+        background-color: #E7816B;
+    }
+    &:hover &--title {
+        color: #fff;
+    }
+    &:hover &--desc {
+        color: #fff;
     }
 }

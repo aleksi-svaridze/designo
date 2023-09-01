@@ -133,9 +133,9 @@ export const WorksCard = ({img, id, desc, title}) => {
                 <div className="works-card--img-content">
                     <img src={img} alt="" />
                 </div>
-                <div className="works-card--text-content bg-tertiary d-flex flex-column align-items-center justify-content-center text-center">
-                    <h2 className='works-card--title fw-medium text-primary text-uppercase'>{title}</h2>
-                    <p className='works-card--desc text-gray-dark m-0'>{desc}</p>
+                <div className="works-card--text-content d-flex flex-column align-items-center justify-content-center text-center">
+                    <h2 className='works-card--title fw-medium text-uppercase'>{title}</h2>
+                    <p className='works-card--desc m-0'>{desc}</p>
                 </div>
             </div>
         </div>
