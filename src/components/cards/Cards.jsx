@@ -144,17 +144,16 @@ export const WorksCard = ({img, id, desc, title}) => {
     )
 }
 
-export const PortfolioMiniCards = ({title, path, img, id}) => {
+export const PortfolioCard = ({title, path, img, styles}) => {
     return(
-        <div className="col-12 col-md-6" key={id}>
-            <div style={{backgroungImage: `url(${img})`}} className="card-portfolio card-portfolio--img-2 overflow-hidden position-relative">
-                <div className="overlay"></div>
-                <div className="card-portfolio__text-content position-absolute start-50 top-50 translate-middle text-center w-100">
-                    <h2 className='card-portfolio__text-content--title text-white fw-medium text-uppercase mb-2 pb-1 mb-lg-4'>APP DESIGN{title}</h2>
-                    <Link to={{path}} className='card-portfolio__text-content--btn text-uppercase text-white fw-medium text-decoration-none d-flex align-items-center justify-content-center column-gap-3'>VIEW PROJECTS
-                        <img src={arrowIcon} alt="" />
-                    </Link>
-                </div>
+        <div style={{backgroundImage: `url(${img})`, height: `${styles}`}} 
+            className={`portfolio-card overflow-hidden position-relative`}>
+            <div className="overlay"></div>
+            <div className="portfolio-card__text-content position-absolute start-50 top-50 translate-middle text-center w-100">
+                <h2 className='portfolio-card__text-content--title text-white fw-medium text-uppercase mb-2 pb-1 mb-lg-4'>{title}</h2>
+                <Link to={path} className='portfolio-card__text-content--btn text-uppercase text-white fw-medium text-decoration-none d-flex align-items-center justify-content-center column-gap-3'>view projects
+                    <img src={arrowIcon} alt="" />
+                </Link>
             </div>
         </div>
     )
