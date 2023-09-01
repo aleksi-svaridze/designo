@@ -19,3 +19,16 @@
         top: 120px;
     }
 }
+.works-rect {
+    width: 1006px;
+    height: 594px;
+    z-index: -1;
+
+    &-left {
+        border-top-left-radius: 297px;
+        border-top-right-radius: 297px;
+        border-bottom-right-radius: 297px;
+        left: 0;
+        top: -300px;
+    }
+}

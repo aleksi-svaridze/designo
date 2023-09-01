@@ -5,7 +5,7 @@ import heroBg from '../../images/hero/hero_bg.png'
 
 const Hero = () => {
     return(
-        <div className='position-relative' style={{maxWidth: '1600px', margin: '0 auto'}}>
+        <div className='position-relative rect-container'>
             <div className="container">
 
                 <div className="hero bg-primary row overflow-hidden position-relative">

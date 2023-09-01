@@ -1,4 +1,5 @@
 import { WorksCard } from "../../components/cards/Cards";
+import Rect from '../../components/rect/Rect';
 
 import img1 from '../../images/works/Express1.jpg'
 import img2 from '../../images/works/Express2.jpg'
@@ -18,19 +19,22 @@ const WorksCardContainer = () => {
         {id: 6, img: img6, title: 'CAMP', desc: 'Get expert training in coding, data, design, and digital marketing'},
     ]
     return(
-        <div className="container works-card-container">
-            <div className="row">
-                {
-                    webDesignData.map(item => (
-                        <WorksCard 
-                            img={item.img} 
-                            title={item.title} 
-                            id={item.id} 
-                            desc={item.desc}    
-                        />       
-                    ))
-                }
+        <div className="position-relative rect-container">
+            <div className="container works-card-container">
+                <div className="row">
+                    {
+                        webDesignData.map(item => (
+                            <WorksCard 
+                                img={item.img} 
+                                title={item.title} 
+                                id={item.id} 
+                                desc={item.desc}    
+                            />       
+                        ))
+                    }
+                </div>
             </div>
+            <Rect styles="works-rect works-rect-left position-absolute bg-gray-light d-none d-xl-block" />
         </div>
     )
 }
