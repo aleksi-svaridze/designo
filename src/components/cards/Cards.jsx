@@ -58,13 +58,14 @@ export const ContactCard = () => {
     )
 };
 
-export const HeadingCard = () => {
+export const HeadingCard = ({title, desc}) => {
     return(
         <div className="bg-primary heading-card d-flex flex-column justify-content-center align-items-center container position-relative overflow-hidden text-center">
             
-            <h2 className="heading-card--title fw-medium text-white mb-4 text-capitalize">Web Design</h2>
+            <h2 className="heading-card--title fw-medium text-white mb-4 text-capitalize">{title}</h2>
             <p className="heading-card--desc text-white fw-normal mb-0 px-1">
-                We build websites that serve as powerful marketing tools and bring memorable brand experiences.
+                {/* We build websites that serve as powerful marketing tools and bring memorable brand experiences. */}
+                {desc}
             </p>
            
             <Circles 
