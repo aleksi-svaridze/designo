@@ -71,7 +71,8 @@ export const HeadingCard = (
     circleBottomMidRight}
 ) => {
     return(
-        <div className="bg-primary heading-card d-flex flex-column justify-content-center align-items-center container position-relative overflow-hidden text-center">
+        <div className="container">
+            <div className="bg-primary heading-card d-flex flex-column justify-content-center align-items-center position-relative overflow-hidden text-center">
             
             <h2 className="heading-card--title fw-medium text-white mb-4 text-capitalize">{title}</h2>
             <p className="heading-card--desc text-white fw-normal mb-0 px-1">{desc}</p>
@@ -144,6 +145,7 @@ export const HeadingCard = (
                 endColor='rgba(93, 2, 2, 0.50)' 
                 endColorOpacity='100%' 
             />
+            </div>
         </div>
     )
 };
