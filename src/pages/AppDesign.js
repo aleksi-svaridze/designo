@@ -27,7 +27,26 @@ const AppDesign = () => {
     ]
     return(
         <div className="overflow-hidden">
-            <HeadingCard title={'app design'} desc={'Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.'} />
+            <HeadingCard 
+                title={'app design'} 
+                desc={'Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.'} 
+
+                circleTopRight='rounded-circle position-absolute heading-card__circles heading-card__circles--top heading-card__circles--top--1 d-lg-none'
+
+                circleTopMidRight={'rounded-circle position-absolute heading-card__circles heading-card__circles--top heading-card__circles--top--2'}
+                
+                circleTopMidLeft={'rounded-circle position-absolute heading-card__circles heading-card__circles--top heading-card__circles--top--3'}
+
+
+                circleBottomLeft={'rounded-circle position-absolute heading-card__circles heading-card__circles--bottom heading-card__circles--bottom--4 d-none d-lg-block'}
+
+                circleBottomMidLeft={'rounded-circle position-absolute heading-card__circles heading-card__circles--bottom heading-card__circles--bottom--3 d-none d-lg-block'}
+
+                circleBottomMidRight={'rounded-circle position-absolute heading-card__circles heading-card__circles--bottom heading-card__circles--bottom--2'} 
+
+                circleBottomRight='rounded-circle position-absolute heading-card__circles heading-card__circles--bottom heading-card__circles--bottom--1 d-lg-none'
+            />
+                
        
             <div className="position-relative rect-container">
                 <div className="container works-card-container">

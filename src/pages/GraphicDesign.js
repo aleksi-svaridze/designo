@@ -23,7 +23,27 @@ const WebDesign = () => {
     ]
     return(
         <div className="overflow-hidden">
-            <HeadingCard title={'Graphic Design'} desc={'We deliver eye-catching branding materials that are tailored to meet your business objectives.'} />
+            <HeadingCard 
+                title={'Graphic Design'} 
+                desc={'We deliver eye-catching branding materials that are tailored to meet your business objectives.'} 
+
+                circleTopRight='rounded-circle position-absolute heading-card__circles heading-card__circles--top heading-card__circles--top--1 d-lg-none'
+
+                circleTopMidLeft='rounded-circle position-absolute heading-card__circles heading-card__circles--top heading-card__circles--top--3 d-lg-none'
+
+                circleTopLeft={'rounded-circle position-absolute heading-card__circles heading-card__circles--top heading-card__circles--top--4'}
+
+
+                circleTopMidRight={'rounded-circle position-absolute heading-card__circles heading-card__circles--top heading-card__circles--top--2'}
+
+                circleBottomLeft={'rounded-circle position-absolute heading-card__circles heading-card__circles--bottom heading-card__circles--bottom--4 d-none d-lg-block'}
+
+                circleBottomMidLeft={'rounded-circle position-absolute heading-card__circles heading-card__circles--bottom heading-card__circles--bottom--3 d-none d-lg-block'}
+
+                circleBottomRight='rounded-circle position-absolute heading-card__circles heading-card__circles--bottom heading-card__circles--bottom--1 d-lg-none'
+
+                circleBottomMidRight='rounded-circle position-absolute heading-card__circles heading-card__circles--bottom heading-card__circles--bottom--2 d-lg-none' 
+            />
 
             <div className="position-relative rect-container">
                 <div className="container works-card-container">

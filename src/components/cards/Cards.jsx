@@ -58,18 +58,27 @@ export const ContactCard = () => {
     )
 };
 
-export const HeadingCard = ({title, desc}) => {
+export const HeadingCard = (
+    {title, 
+    desc, 
+    circleTopLeft, 
+    circleTopRight, 
+    circleTopMidLeft, 
+    circleTopMidRight,
+    circleBottomLeft,
+    circleBottomRight,
+    circleBottomMidLeft,
+    circleBottomMidRight}
+) => {
     return(
         <div className="bg-primary heading-card d-flex flex-column justify-content-center align-items-center container position-relative overflow-hidden text-center">
             
             <h2 className="heading-card--title fw-medium text-white mb-4 text-capitalize">{title}</h2>
-            <p className="heading-card--desc text-white fw-normal mb-0 px-1">
-                {/* We build websites that serve as powerful marketing tools and bring memorable brand experiences. */}
-                {desc}
-            </p>
+            <p className="heading-card--desc text-white fw-normal mb-0 px-1">{desc}</p>
            
+           {/* Top circles */}
             <Circles 
-                styles={'rounded-circle position-absolute heading-card__circles heading-card__circles--top heading-card__circles--top--1'} 
+                styles={circleTopRight} 
                 degree="90deg" 
                 startColor='rgba(93, 2, 2, 0.00)' 
                 startColorOpacity='0%' 
@@ -77,7 +86,15 @@ export const HeadingCard = ({title, desc}) => {
                 endColorOpacity='100%' 
             />
             <Circles 
-                styles={'rounded-circle position-absolute heading-card__circles heading-card__circles--top heading-card__circles--top--2'} 
+                styles={circleTopMidRight} 
+                degree="90deg" 
+                startColor='rgba(93, 2, 2, 0.50)' 
+                startColorOpacity='0%' 
+                endColor='rgba(93, 2, 2, 0.00)' 
+                endColorOpacity='100%' 
+            />
+            <Circles 
+                styles={circleTopLeft} 
                 degree="90deg" 
                 startColor='rgba(93, 2, 2, 0.50)' 
                 startColorOpacity='0%' 
@@ -85,15 +102,26 @@ export const HeadingCard = ({title, desc}) => {
                 endColorOpacity='100%' 
             />
              <Circles 
-                styles={'rounded-circle position-absolute heading-card__circles heading-card__circles--top heading-card__circles--top--3'} 
+                styles={circleTopMidLeft} 
                 degree="90deg" 
                 startColor='rgba(93, 2, 2, 0.50)' 
                 startColorOpacity='0%' 
                 endColor='rgba(93, 2, 2, 0.00)' 
                 endColorOpacity='100%' 
             />
+
+            {/* Bottom circles */}
+            
             <Circles 
-                styles={'rounded-circle position-absolute heading-card__circles heading-card__circles--bottom heading-card__circles--bottom--1'} 
+                styles={circleBottomLeft} 
+                degree="90deg" 
+                startColor='rgba(93, 2, 2, 0.00)' 
+                startColorOpacity='0%' 
+                endColor='rgba(93, 2, 2, 0.50)' 
+                endColorOpacity='100%' 
+            />
+             <Circles 
+                styles={circleBottomMidLeft} 
                 degree="90deg" 
                 startColor='rgba(93, 2, 2, 0.00)' 
                 startColorOpacity='0%' 
@@ -101,7 +129,15 @@ export const HeadingCard = ({title, desc}) => {
                 endColorOpacity='100%' 
             />
             <Circles 
-                styles={'rounded-circle position-absolute heading-card__circles heading-card__circles--bottom heading-card__circles--bottom--2'} 
+                styles={circleBottomMidRight} 
+                degree="90deg" 
+                startColor='rgba(93, 2, 2, 0.00)' 
+                startColorOpacity='0%' 
+                endColor='rgba(93, 2, 2, 0.50)' 
+                endColorOpacity='100%' 
+            />
+            <Circles 
+                styles={circleBottomRight} 
                 degree="90deg" 
                 startColor='rgba(93, 2, 2, 0.00)' 
                 startColorOpacity='0%' 

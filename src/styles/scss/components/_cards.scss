@@ -199,6 +199,9 @@
                 right: 584px;
                 display: none;
             }
+            &--4 {
+                right: 876px;
+            }
         }
         &--bottom {
             bottom: -264px;
@@ -206,9 +209,16 @@
             &--1 {
                 right: 292px;
             }
+
             &--2 {
                 right: 292px;
                 display: none;
+            }
+            &--3 {
+                right: 584px;
+            }
+            &--4 {
+                right: 876px;
             }
         }
 

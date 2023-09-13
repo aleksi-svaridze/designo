@@ -29,7 +29,20 @@ const WebDesign = () => {
     ]
     return(
         <div className="overflow-hidden">
-            <HeadingCard title='web design' desc='We build websites that serve as powerful marketing tools and bring memorable brand experiences.' />
+            <HeadingCard 
+                title='web design' 
+                desc='We build websites that serve as powerful marketing tools and bring memorable brand experiences.'
+                
+                circleTopRight='rounded-circle position-absolute heading-card__circles heading-card__circles--top heading-card__circles--top--1'
+
+                circleTopMidRight='rounded-circle position-absolute heading-card__circles heading-card__circles--top heading-card__circles--top--2'
+
+                circleTopMidLeft='rounded-circle position-absolute heading-card__circles heading-card__circles--top heading-card__circles--top--3'
+                
+                circleBottomRight='rounded-circle position-absolute heading-card__circles heading-card__circles--bottom heading-card__circles--bottom--1'
+
+                circleBottomMidRight='rounded-circle position-absolute heading-card__circles heading-card__circles--bottom heading-card__circles--bottom--2' 
+            />
 
             <div className="position-relative rect-container">
                 <div className="container works-card-container">
