@@ -2,6 +2,7 @@ import Button from '../buttons/Button'
 import Circles from '../circles/Circles';
 import {Link} from 'react-router-dom'
 import arrowIcon from '../../images/portfolio/arrow_icon.svg'
+import scrollToTop from '../../functions/scrallToTop';
 
 export const ContactCard = () => {
     return(
@@ -190,7 +191,7 @@ export const PortfolioCard = ({title, path, img, styles}) => {
             <div className="overlay"></div>
             <div className="portfolio-card__text-content position-absolute start-50 top-50 translate-middle text-center w-100">
                 <h2 className='portfolio-card__text-content--title text-white fw-medium text-uppercase mb-2 pb-1 mb-lg-4'>{title}</h2>
-                <Link to={path} className='portfolio-card__text-content--btn text-uppercase text-white fw-medium text-decoration-none d-flex align-items-center justify-content-center column-gap-3'>view projects
+                <Link onClick={scrollToTop} to={path} className='portfolio-card__text-content--btn text-uppercase text-white fw-medium text-decoration-none d-flex align-items-center justify-content-center column-gap-3'>view projects
                     <img src={arrowIcon} alt="" />
                 </Link>
             </div>
