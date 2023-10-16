@@ -18,7 +18,9 @@ const AboutUs = () => {
             <div className="container about-container">
                 <div className="row">
                     {aboutUsData.map(item => (
-                        <AboutCard id={item.id} img={item.img} title={item.title} desc={item.desc} />
+                        <div className="col-12 col-xl-4" key={item.id}>
+                            <AboutCard id={item.id} img={item.img} title={item.title} desc={item.desc} />
+                        </div>
                     ))}
                 </div>
             </div>

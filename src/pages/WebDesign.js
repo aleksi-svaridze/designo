@@ -48,7 +48,9 @@ const WebDesign = () => {
                 <div className="container works-card-container">
                     <div className="row">
                         {webDesignData.map(item => (
-                             <WorksCard id={item.id} title={item.title} img={item.img} desc={item.desc} />
+                            <div className="col-12 col-lg-6 col-xl-4" key={item.id}>
+                                <WorksCard id={item.id} title={item.title} img={item.img} desc={item.desc} />
+                             </div>
                         ))}
                     </div>
                 </div>
