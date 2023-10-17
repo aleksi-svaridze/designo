@@ -1,6 +1,9 @@
 import Button from '../buttons/Button'
 import Circles from '../circles/Circles';
+
 import {Link} from 'react-router-dom'
+import { useWindowSize } from 'usehooks-ts';
+
 import arrowIcon from '../../images/portfolio/arrow_icon.svg'
 import scrollToTop from '../../functions/scrallToTop';
 
@@ -191,6 +194,26 @@ export const PortfolioCard = ({title, path, img, styles}) => {
                     <img src={arrowIcon} alt="" />
                 </Link>
             </div>
+        </div>
+    )
+}
+
+export const AboutPageCard = ({img, heading, desc, desc2, textBg, imgOrder, textOrder, headingColor, descColor, imgHeight}) => {
+    const {width} = useWindowSize();
+    
+    return(
+        <div className="about_page--card overflow-hidden d-flex flex-column flex-lg-row">
+
+            <div className={`about_page--card-text-content d-flex flex-column justify-content-center ${textBg +' '+ textOrder}`}>
+                <h2 className={`text-center text-md-start mb-4 ${headingColor}`}>{heading}</h2>
+                <p className={`text-center text-md-start m-0 ${descColor}`}>{desc}</p>
+                { desc2 && <p className={`text-center text-md-start mt-3 ${descColor}`}>{desc2}</p>}
+            </div>
+
+            <div 
+                className={`about_page--card-img-content ${imgOrder}`} 
+                style={{ backgroundImage: `url(${img})`, height: width >= 991 && imgHeight}}></div>
+
         </div>
     )
 }
