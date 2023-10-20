@@ -19,7 +19,15 @@ const AboutUs = () => {
                 <div className="row">
                     {aboutUsData.map(item => (
                         <div className="col-12 col-xl-4" key={item.id}>
-                            <AboutCard id={item.id} img={item.img} title={item.title} desc={item.desc} />
+                            <AboutCard 
+                                id={item.id} 
+                                img={item.img} 
+                                title={item.title} 
+                                desc={item.desc}
+                                cardStyle={'d-flex flex-column flex-md-row flex-xl-column align-items-center about-card'}
+                                textStyles='text-center text-md-start text-xl-center ms-md-5 ms-0 ms-xl-0'
+                                imageStyle={'mb-xl-5 mb-5 mb-md-0'}
+                            />
                         </div>
                     ))}
                 </div>

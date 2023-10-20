@@ -22,7 +22,10 @@ const Hero = () => {
                         <div className='hero__text-content text-center text-lg-start position-relative'>
                             <h1 className="hero__text-content--title text-white fw-medium">Award-winning custom designs and digital branding solutions</h1>
                             <p className="hero__text-content--desc text-white fw-normal">With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
-                            <Button path={''} content='learn more' btnStyle={'btn-white mx-auto ms-lg-0 me-lg-auto'} />
+                            <Button 
+                                path={''} 
+                                content='learn more' 
+                                btnStyle={'btn btn-white mx-auto ms-lg-0 me-lg-auto'} />
                         </div>
                     </div>
 

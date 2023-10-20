@@ -1,18 +1,30 @@
-.btn-white {
+.btn {
     width: 152px;
     height: 56px;
     flex-shrink: 0;
     border-radius: 8px;
-    background-color: #FFF;
-
-    color: #333136;
     font-size: 15px;
     line-height: normal;
     letter-spacing: 1px;
     transition: all .2s;
 
-    &:hover {
+    &-white {
+        background-color: #FFF;
+        color: #333136;
+    
+        &:hover {
+            color: #fff;
+            background-color: #FFAD9B;
+        }
+    }
+
+    &-pink {
+        background-color: #E7816B;
         color: #fff;
-        background-color: #FFAD9B;
+    
+        &:hover {
+            color: #fff;
+            background-color: #FFAD9B;
+        }
     }
 }

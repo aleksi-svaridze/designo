@@ -4,8 +4,8 @@ import { ReactComponent as YoutubeIcon } from '../../images/footer/youtube_icon.
 import { ReactComponent as TwitterIcon } from '../../images/footer/twitter_icon.svg'
 import { ReactComponent as PinterestIcon } from '../../images/footer/pinterest_icon.svg'
 import { ReactComponent as InstagramIcon } from '../../images/footer/instagram_icon.svg'
-import SocIcons from '../../components/social-icons/SocialIcons';
-import { ContactCard } from '../../components/cards/Cards';
+import SocIcons from '../../components/social-icons/SocialIcons'
+import { ContactCard } from '../../components/cards/Cards'
 
 
 const Footer = () => {

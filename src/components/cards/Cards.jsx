@@ -15,7 +15,10 @@ export const ContactCard = () => {
                     <h2 className="contact-card--title fw-medium text-white mb-3">Let's talk about your project</h2>
                     <p className="contact-card--desc text-white fw-normal mb-0">Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
                 </div>
-                <Button content='Get in touch' path='/contact' btnStyle='btn-white position-relative z-3' />
+                <Button 
+                    content='Get in touch' 
+                    path='/contact' 
+                    btnStyle='btn btn-white position-relative z-3' />
 
                 <Circles 
                     styles={'rounded-circle position-absolute circles circles--top circles--top--2'} 
@@ -154,15 +157,16 @@ export const HeadingCard = (
     )
 };
 
-export const AboutCard = ({id, img, title, desc}) => {
+export const AboutCard = ({id, img, title, desc, buttonText, cardStyle, textStyles, btnStyle, imageStyle}) => {
     return(
-        <div className="d-flex flex-column flex-md-row flex-xl-column align-items-center about-card">
+        <div className={`${cardStyle}`}>
 
-            <img src={img} alt={title} className="mb-xl-5 mb-5 mb-md-0 about-card--img" />
+        <img src={img} alt={title} className={`${imageStyle} about-card--img`} />
 
-            <div className="text-center text-md-start text-xl-center ms-md-5 ms-0 ms-xl-0">
+            <div className={`${textStyles}`}>
                 <h3 className="mb-4 pb-2 about-card--title fw-medium text-gray-dark">{title}</h3>
                 <p className="about-card--desc text-gray-dark fw-normal m-0">{desc}</p>
+                { buttonText && <Button content={buttonText} btnStyle={btnStyle} /> }
             </div>
 
         </div>

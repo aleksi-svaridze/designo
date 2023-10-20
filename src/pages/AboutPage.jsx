@@ -1,12 +1,22 @@
-import { AboutPageCard } from "../components/cards/Cards"
+import { AboutCard, AboutPageCard } from "../components/cards/Cards"
 import { useWindowSize } from "usehooks-ts"
 
 import aboutBg from '../images/about-page/about_us_bg.jpg'
 import worldClassTallentBg from '../images/about-page/world_class_talent_bg.jpg'
 import realDealBg from '../images/about-page/real_deal_bg.jpg'
 
+import image1 from '../images/about-page/canada.png'
+import image2 from '../images/about-page/australia.png'
+import image3 from '../images/about-page/uk.png'
+
 const AboutPage = () => {
     const {width} = useWindowSize();
+
+    let locationData = [
+        {id: 1, img: image1, title: 'PASSIONATE', buttonText: 'see location'},
+        {id: 2, img: image2, title: 'RESOURCEFUL', buttonText: 'see location'},
+        {id: 3, img: image3, title: 'FRIENDLY', buttonText: 'see location'},
+    ]
 
     return(
         <div className="container portfolio-card-container" style={{padding: width <= 576 && '0px'}}>
@@ -20,6 +30,23 @@ const AboutPage = () => {
                     textOrder={'order-2 order-lg-1'}
                     desc={"Founded in 2010, we are a creative agency that produces lasting results for our clients. We've partnered with many startups, corporations, and nonprofits alike to craft designs that make real impact. We're always looking forward to creating brands, products, and digital experiences that connect with our clients' audiences."}
                 />
+            </div>
+
+            <div className="row">
+                {locationData.map(item => (
+                    <div className="col-12 col-lg-4" key={item.id}>
+                        <AboutCard 
+                            id={item.id} 
+                            img={item.img} 
+                            title={item.title} 
+                            buttonText={item.buttonText} 
+                            cardStyle={'d-flex flex-column align-items-center about-card'}
+                            textStyles='text-center'
+                            btnStyle='btn btn-pink mx-auto'
+                            imageStyle='mb-5'
+                        />
+                    </div>
+                ))}
             </div>
 
             <AboutPageCard 
