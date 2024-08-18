@@ -5,6 +5,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1.5rem',
+        md: '2.5rem',
+        xl: '85px',
+        '2xl': '213px',
+      },
+    },
     extend: {
       fontFamily: {
         "jost": ["Jost", "sans-serif"],
