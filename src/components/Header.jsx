@@ -1,11 +1,23 @@
 import { Link, NavLink } from 'react-router-dom';
 import LogoImage from '../images/logo.png';
-import { Menu } from '../images/svgs';
+import { Menu, Close } from '../images/svgs';
+import { useState } from 'react';
+import { useWindowSize } from "@uidotdev/usehooks";
+import MobileMenu from './MobileMenu';
 
 export const Header = () => {
+    const [ showMenu, setShowMenu] = useState(false);
+    const {width} = useWindowSize();
+
+    const handleMenu = () => {
+        setShowMenu(!showMenu);
+    }
+
+    showMenu ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
+    
     return(
-        <header className='py-9 md:py-16'>
-            <div className='flex items-center justify-between container'>
+        <header className='py-9 md:py-16 relative'>
+            <div className='flex items-center justify-between container px-6 md:px-10 xl:px-[85px]'>
                 <Link to="" className='flex items-center gap-x-5'>
                     <img src={LogoImage} alt="" className='w-6 h-6' />
                     <span className='text-2xl leading-6 tracking-[5px] uppercase font-bold font-spartan'>designo</span>    
@@ -17,10 +29,11 @@ export const Header = () => {
                     <NavLink to="contact" className={({isActive}) => isActive && 'border-b border-dark-gray'}>contact</NavLink>
                 </nav>
 
-                <div className='md:hidden'>
-                    <Menu />
+                <div className='md:hidden' onClick={handleMenu}>
+                    {showMenu ? <Close /> : <Menu /> }
                 </div>
             </div>
+            { showMenu && <MobileMenu /> }
         </header>
     )
 }
