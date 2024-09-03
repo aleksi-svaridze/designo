@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import LogoImage from '../images/logo.png';
 import { Menu, Close } from '../images/svgs';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useWindowSize } from "@uidotdev/usehooks";
 import MobileMenu from './MobileMenu';
 
@@ -13,7 +13,10 @@ export const Header = () => {
         setShowMenu(!showMenu);
     }
 
-    showMenu ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
+    useEffect(() => {
+        width >= 768 && setShowMenu(false);
+        showMenu ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
+    }, [width, showMenu])
     
     return(
         <header className='py-9 md:py-16 relative'>
@@ -33,7 +36,7 @@ export const Header = () => {
                     {showMenu ? <Close /> : <Menu /> }
                 </div>
             </div>
-            { showMenu && <MobileMenu /> }
+            { showMenu && <MobileMenu setShowMenu={setShowMenu} /> }
         </header>
     )
 }
