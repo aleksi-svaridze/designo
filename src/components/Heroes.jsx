@@ -7,6 +7,7 @@ export const PrimaryHero = () => {
 
     return (
         <div className="relative h-[843px] lg:h-[640px] bg-peach md:rounded-[15px] pt-20 md:pt-[60px] lg:pt-0 px-7 lg:px-16 xl:px-24 overflow-hidden">
+            I am a hero!!!
 
             <div className="w-[640px] h-[640px] rounded-full absolute top-[50%] -translate-y-[50%] left-0 md:left-auto md:-right-32 xl:-translate-y-[0] xl:right-0 xl:top-0 xl:bottom-0 bg-gradient-to-t from-transparent to-[#5D0202]/50"></div>
 
