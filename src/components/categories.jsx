@@ -2,6 +2,7 @@ import { ArrowRight } from "../images/svgs/index";
 import WebDesign from "../images/categories/web_design.jpg";
 import AppDesign from "../images/categories/app_design.jpg";
 import GraphicDesign from "../images/categories/graphic_design.jpg";
+import { Link } from "react-router-dom";
 
 export const Categories = () => {
   return (
@@ -14,13 +15,13 @@ export const Categories = () => {
           <h2 className="text-white uppercase font-medium text-[28px] md:text-[40px] leading-9 md:leading-[48px] tracking-[1.4px] md:tracking-[2px] text-center">
             web design
           </h2>
-          <a
-            href="/"
+          <Link
+            to="web-design"
             className="font-medium text-white text-[15px] uppercase leading-[15px] tracking-[5px] flex items-center gap-x-[22px]"
           >
             view projects
             <ArrowRight />
-          </a>
+          </Link>
         </section>
       </div>
 
@@ -33,13 +34,13 @@ export const Categories = () => {
             <h2 className="text-white uppercase font-medium text-[28px] md:text-[40px] leading-9 md:leading-[48px] tracking-[1.4px] md:tracking-[2px] text-center">
               app design
             </h2>
-            <a
-              href="/"
+            <Link
+              to="app-design"
               className="font-medium text-white text-[15px] uppercase leading-[15px] tracking-[5px] flex items-center gap-x-[22px]"
             >
               view projects
               <ArrowRight />
-            </a>
+            </Link>
           </section>
         </div>
 
@@ -51,13 +52,13 @@ export const Categories = () => {
             <h2 className="text-white uppercase font-medium text-[28px] md:text-[40px] leading-9 md:leading-[48px] tracking-[1.4px] md:tracking-[2px] text-center">
               graphic design
             </h2>
-            <a
-              href="/"
+            <Link
+              to="graphic-design"
               className="font-medium text-white text-[15px] uppercase leading-[15px] tracking-[5px] flex items-center gap-x-[22px]"
             >
               view projects
               <ArrowRight />
-            </a>
+            </Link>
           </section>
         </div>
       </div>

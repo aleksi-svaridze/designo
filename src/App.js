@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { OurCompany } from "./pages/OurCompany";
 import { Location } from "./pages/Location";
 import { Contact } from "./pages/Contact";
+import { WebDesign } from "./pages/webDesign";
 import { NotFound } from "./pages/NotFound";
 
 import { Header } from "./components/Header";
@@ -18,6 +19,7 @@ function App() {
         <Route path="about" element={<OurCompany />} />
         <Route path="locations" element={<Location />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="web-design" element={<WebDesign />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
