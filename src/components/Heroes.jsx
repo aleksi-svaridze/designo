@@ -40,3 +40,30 @@ export const PrimaryHero = () => {
     </div>
   );
 };
+
+export const SecondaryHero = () => {
+  return (
+    <div className="relative h-[320px] md:h-[252px] bg-peach md:rounded-[15px] overflow-hidden flex items-center">
+      {/* Top circles */}
+      <div className="w-[292px] h-[292px] rounded-full absolute top-0 md:-top-[166px] right-0 md:-right-[166px] xl:right-0 bg-gradient-to-b from-[#5D0202]/0 to-[#5D0202]/15"></div>
+
+      <div className="w-[292px] h-[292px] rounded-full absolute top-0 md:-top-[166px] right-[292px] md:right-[126px] xl:right-[292px]  bg-gradient-to-tl from-[#5D0202]/0 to-[#5D0202]/15"></div>
+
+      <div className="hidden md:block w-[292px] h-[292px] rounded-full absolute md:-top-[166px] md:right-[418px] xl:right-[584px] bg-gradient-to-tr from-[#5D0202]/0 to-[#5D0202]/10"></div>
+
+      {/* Bottom circles */}
+      <div className="hidden md:block w-[292px] h-[292px] rounded-full absolute md:-bottom-[166px] md:-right-[166px] xl:right-0 bg-gradient-to-b from-[#5D0202]/0 to-[#5D0202]/15"></div>
+      <div className="hidden md:block w-[292px] h-[292px] rounded-full absolute md:-bottom-[166px] md:right-[126px] xl:right-[292px] bg-gradient-to-l from-[#5D0202]/0 to-[#5D0202]/15"></div>
+
+      <div className="w-[325px] md:w-[390px] text-white text-center mx-auto z-10">
+        <h1 className="capitalize font-medium text-[32px] md:text-5xl leading-9 md:leading-none mb-6">
+          web design
+        </h1>
+        <p className="text-[15px] md:text-base leading-[25px] md:leading-[26px]">
+          We build websites that serve as powerful marketing tools and bring
+          memorable brand experiences.
+        </p>
+      </div>
+    </div>
+  );
+};
