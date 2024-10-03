@@ -57,8 +57,9 @@ export const WebDesign = () => {
     <div className="md:container md:px-10 xl:px-[85px]">
       <SecondaryHero />
       <div className="container py-24 md:py-[120px] lg:py-[160px] px-6 md:px-0 grid lg:grid-cols-3 gap-y-10 lg:gap-y-8 lg:gap-x-[30px]">
-        {webDesignCardsContent &&
-          webDesignCardsContent.map((item) => <DesignCards item={item} />)}
+        {webDesignCardsContent.map((item) => (
+          <DesignCards item={item} />
+        ))}
       </div>
     </div>
   );
