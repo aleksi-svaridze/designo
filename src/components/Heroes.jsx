@@ -41,7 +41,7 @@ export const PrimaryHero = () => {
   );
 };
 
-export const SecondaryHero = () => {
+export const SecondaryHero = ({ title, description }) => {
   return (
     <div className="relative h-[320px] md:h-[252px] bg-peach md:rounded-[15px] overflow-hidden flex items-center">
       {/* Top circles */}
@@ -57,11 +57,10 @@ export const SecondaryHero = () => {
 
       <div className="w-[325px] md:w-[390px] text-white text-center mx-auto z-10">
         <h1 className="capitalize font-medium text-[32px] md:text-5xl leading-9 md:leading-none mb-6">
-          web design
+          {title}
         </h1>
         <p className="text-[15px] md:text-base leading-[25px] md:leading-[26px]">
-          We build websites that serve as powerful marketing tools and bring
-          memorable brand experiences.
+          {description}
         </p>
       </div>
     </div>

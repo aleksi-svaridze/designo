@@ -2,14 +2,7 @@ import { useState } from "react";
 import { DesignCards } from "../components/Cards";
 import { SecondaryHero } from "../components/Heroes";
 
-import imageExpress from "../images/cards/web-design-cards/express.jpg";
-import imageTransfer from "../images/cards/web-design-cards/transfer.jpg";
-import imagePhoton from "../images/cards/web-design-cards/photon.jpg";
-import imageBuilder from "../images/cards/web-design-cards/builder.jpg";
-import imageBlogr from "../images/cards/web-design-cards/blogr.jpg";
-import imageCamp from "../images/cards/web-design-cards/camp.jpg";
-
-export const WebDesign = () => {
+export const AppDesign = () => {
   const [webDesignCardsContent] = useState([
     {
       id: 1,
@@ -45,20 +38,14 @@ export const WebDesign = () => {
       description:
         "Blogr is a platform for creating an online blog or publication",
     },
-    {
-      id: 6,
-      imageSrc: imageCamp,
-      title: "camp",
-      description:
-        "Get expert training in coding, data, design, and digital marketing",
-    },
   ]);
   return (
     <div className="md:container md:px-10 xl:px-[85px]">
       <SecondaryHero
-        title="web design"
-        description="We build websites that serve as powerful marketing tools and bring
-          memorable brand experiences."
+        title={"app design"}
+        description={
+          "Our mobile designs bring intuitive digital solutions to your customers right at their fingertips."
+        }
       />
       <div className="container py-24 md:py-[120px] lg:py-[160px] px-6 md:px-0 grid lg:grid-cols-3 gap-y-10 lg:gap-y-8 lg:gap-x-[30px]">
         {webDesignCardsContent.map((item) => (
