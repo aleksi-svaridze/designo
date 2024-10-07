@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DesignCards } from "../components/Cards";
+import { CategoriesCard, DesignCards } from "../components/Cards";
 import { SecondaryHero } from "../components/Heroes";
 
 import imageExpress from "../images/cards/web-design-cards/express.jpg";
@@ -8,6 +8,9 @@ import imagePhoton from "../images/cards/web-design-cards/photon.jpg";
 import imageBuilder from "../images/cards/web-design-cards/builder.jpg";
 import imageBlogr from "../images/cards/web-design-cards/blogr.jpg";
 import imageCamp from "../images/cards/web-design-cards/camp.jpg";
+
+import AppDesign from "../images/categories/app_design.jpg";
+import GraphicDesign from "../images/categories/graphic_design.jpg";
 
 export const WebDesign = () => {
   const [webDesignCardsContent] = useState([
@@ -64,6 +67,20 @@ export const WebDesign = () => {
         {webDesignCardsContent.map((item) => (
           <DesignCards item={item} />
         ))}
+      </div>
+      <div className="container pb-24 md:pb-[120px] lg:pb-[160px] px-6 md:px-0 grid lg:grid-cols-2 gap-y-10 lg:gap-y-8 lg:gap-x-[30px]">
+        <CategoriesCard
+            url="app-design"
+            img={AppDesign} 
+            title='app design' 
+            lgHeight='lg:h-[308px]'
+        />
+          <CategoriesCard
+            url="graphic-design"
+            img={GraphicDesign} 
+            title='graphic design' 
+            lgHeight='lg:h-[308px]'
+        />
       </div>
     </div>
   );
