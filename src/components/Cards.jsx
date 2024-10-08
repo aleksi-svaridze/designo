@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "../images/svgs/index";
+import { ButtonPeach } from "./Btns";
 
 export const DesignCards = ({ item }) => {
   return (
@@ -40,5 +41,15 @@ export const CategoriesCard = ({url, title, img, lgHeight}) => {
             </Link>
           </section>
         </div>
+  )
+}
+
+export const LocationCard = ({img, title, id}) => {
+  return(
+    <div className="flex flex-col justify-center items-center" key={id}>
+      <img src={img} alt="" className="w-[202px] h-[202px]" />
+      <h3 className="text-dark-gray font-medium text-[20px] leading-[26px] uppercase mt-[48px] mb-[24px] tracking-[5px]">{title}</h3>
+      <ButtonPeach title='see location' />
+    </div>
   )
 }

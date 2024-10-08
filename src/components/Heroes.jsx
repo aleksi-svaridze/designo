@@ -1,6 +1,7 @@
 import PrimaryHeroImg from "../images/hero_images/primaryHeroImg.png";
 import PrimaryHeroImgMobile from "../images/hero_images/primaryHeroImgMobile.png";
 import { useWindowSize } from "@uidotdev/usehooks";
+import { ButtonWhite } from "./Btns";
 
 export const PrimaryHero = () => {
   const { width } = useWindowSize();
@@ -19,9 +20,7 @@ export const PrimaryHero = () => {
             fully responsive websites, app design, and engaging brand
             experiences. Find out more about our services.
           </p>
-          <button className="hover:text-white hover:bg-light-peach h-14 rounded-lg bg-white text-[15px] font-medium uppercase tracking-[1px] px-6">
-            Learn More
-          </button>
+          <ButtonWhite title='Learn More' />
         </section>
         {width >= 1024 ? (
           <img
