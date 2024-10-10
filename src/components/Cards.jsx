@@ -110,18 +110,33 @@ export const LocationCard = ({
   return (
     <div className="grid lg:grid-cols-3 md:gap-[30px]">
       <div
-        className={`lg:col-span-2 bg-red-500 md:rounded-[15px] h-[320px] md:h-[326px] ${
+        className={`lg:col-span-2 bg-extra-light-peach md:rounded-[15px] h-[320px] md:h-[326px] ${
           width < 1023 && "order-last"
-        }`}
+        } flex flex-col lg:flex-row md:gap-x-24 items-end py-20 md:px-20`}
       >
-        content
+        <div>
+          <h3 className="text-peach font-medium text-[32px] leading-9 md:text-[40px] md:leading-[48px] capitalize">
+            {title}
+          </h3>
+          <h4 className="font-bold text-[15px] leading-[25px] md:text-base md:leading-[26px] text-dark-gray capitalize">
+            Designo Central Office
+          </h4>
+          <p>{address_1}</p>
+          <p>{address_2}</p>
+        </div>
+
+        <div>
+          <h4 className="font-bold text-[15px] leading-[25px] md:text-base md:leading-[26px] text-dark-gray capitalize">
+            contact
+          </h4>
+          <p>P : {tel}</p>
+          <p>M : {email}</p>
+        </div>
       </div>
       <div
         style={{ backgroundImage: `url(${map})` }}
-        className={`bg-red-500 md:rounded-[15px] h-[320px] md:h-[326px] bg-no-repeat bg-cover bg-right-top ${orderDirection}`}
-      >
-        map
-      </div>
+        className={`md:rounded-[15px] h-[320px] md:h-[326px] bg-no-repeat bg-cover bg-right-top ${orderDirection}`}
+      ></div>
     </div>
   );
 };
