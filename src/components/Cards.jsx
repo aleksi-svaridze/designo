@@ -63,6 +63,9 @@ export const OurCompanyCard = ({
   description_1,
   description_2,
   orderDirection,
+  titleColor,
+  descriptionColor,
+  bgColor,
 }) => {
   const { width } = useWindowSize();
   return (
@@ -73,15 +76,19 @@ export const OurCompanyCard = ({
         <img src={img} className={`w-full ${orderDirection}`} alt={title} />
       )}
       <section
-        className={`bg-extra-light-peach py-20 px-4 md:px-20 lg:px-24 lg:py-0 flex flex-col text-center lg:text-start lg:justify-center gap-y-6 ${
+        className={`${bgColor} py-20 px-4 md:px-20 lg:px-24 lg:py-0 flex flex-col text-center lg:text-start lg:justify-center gap-y-6 ${
           width < 1023 && "order-2"
         }`}
       >
-        <h3 className="font-medium text-[32px] leading-9 text-peach">
+        <h3 className={`font-medium text-[32px] leading-9 ${titleColor}`}>
           {title}
         </h3>
-        <p className="text-[15px] leading-[25px]">{description_1}</p>
-        <p className="text-[15px] leading-[25px]">{description_2}</p>
+        <p className={`text-[15px] leading-[25px] ${descriptionColor}`}>
+          {description_1}
+        </p>
+        <p className={`text-[15px] leading-[25px] ${descriptionColor}`}>
+          {description_2}
+        </p>
       </section>
       {orderDirection === "order-1" && (
         <img src={img} className={`w-full ${orderDirection}`} alt={title} />
