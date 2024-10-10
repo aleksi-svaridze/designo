@@ -106,13 +106,21 @@ export const LocationCard = ({
   email,
   orderDirection,
 }) => {
+  const { width } = useWindowSize();
   return (
     <div className="grid lg:grid-cols-3 md:gap-[30px]">
-      <div className="lg:col-span-2 bg-red-500 md:rounded-[15px] h-[320px] md:h-[326px]">
-        blaa
+      <div
+        className={`lg:col-span-2 bg-red-500 md:rounded-[15px] h-[320px] md:h-[326px] ${
+          width < 1023 && "order-last"
+        }`}
+      >
+        content
       </div>
-      <div className="bg-red-500 md:rounded-[15px] h-[320px] md:h-[326px] order-first">
-        aalb
+      <div
+        style={{ backgroundImage: `url(${map})` }}
+        className={`bg-red-500 md:rounded-[15px] h-[320px] md:h-[326px] bg-no-repeat bg-cover bg-right-top ${orderDirection}`}
+      >
+        map
       </div>
     </div>
   );
