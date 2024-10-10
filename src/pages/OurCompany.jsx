@@ -1,4 +1,4 @@
-import { LocationCard, OurCompanyCard } from "../components/Cards";
+import { CountryCard, OurCompanyCard } from "../components/Cards";
 
 import CanadaImage from "../images/cards/location-cards/canada.png";
 import AustraliaImage from "../images/cards/location-cards/australia.png";
@@ -57,7 +57,7 @@ export const OurCompany = () => {
 
       <div className="grid gap-y-[48px] lg:grid-cols-3 my-[60px] lg:my-[80px]">
         {locationCardData.map((item) => (
-          <LocationCard title={item.title} img={item.img} id={item.id} />
+          <CountryCard title={item.title} img={item.img} id={item.id} />
         ))}
       </div>
 

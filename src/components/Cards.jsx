@@ -45,7 +45,7 @@ export const CategoriesCard = ({ url, title, img, lgHeight }) => {
   );
 };
 
-export const LocationCard = ({ img, title, id }) => {
+export const CountryCard = ({ img, title, id }) => {
   return (
     <div className="flex flex-col justify-center items-center" key={id}>
       <img src={img} alt="" className="w-[202px] h-[202px]" />
@@ -93,6 +93,27 @@ export const OurCompanyCard = ({
       {orderDirection === "order-1" && (
         <img src={img} className={`w-full ${orderDirection}`} alt={title} />
       )}
+    </div>
+  );
+};
+
+export const LocationCard = ({
+  map,
+  title,
+  address_1,
+  address_2,
+  tel,
+  email,
+  orderDirection,
+}) => {
+  return (
+    <div className="grid lg:grid-cols-3 md:gap-[30px]">
+      <div className="lg:col-span-2 bg-red-500 md:rounded-[15px] h-[320px] md:h-[326px]">
+        blaa
+      </div>
+      <div className="bg-red-500 md:rounded-[15px] h-[320px] md:h-[326px] order-first">
+        aalb
+      </div>
     </div>
   );
 };
