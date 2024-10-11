@@ -1,11 +1,24 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import LogoImage from "../images/logo.png";
 import { Facebook, Youtube, X, Pinterest, Instagram } from "../images/svgs";
+import { FooterCard } from "./Cards";
 
 export const Footer = () => {
+  const location = useLocation();
+
+  console.log(location.pathname);
   return (
-    <footer className="pt-[250px] pb-10 bg-black">
-      <div className="container px-6 md:px-10 xl:px-[85px]">
+    <footer
+      className={`${
+        location.pathname !== "/contact"
+          ? "pt-[250px] md:pt-40 lg:pt-[144px]"
+          : "pt-[70px]"
+      } pb-[70px] bg-black`}
+    >
+      <div className="container px-6 md:px-10 xl:px-[85px] relative">
+        <div className="absolute -top-[440px] md:-top-[400px] lg:-top-[365px] left-0 right-0 px-6 md:px-10 xl:px-[85px]">
+          {location.pathname !== "/contact" && <FooterCard />}
+        </div>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <Link
             to="/"

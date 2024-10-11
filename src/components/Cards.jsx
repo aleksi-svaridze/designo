@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "../images/svgs/index";
-import { ButtonPeach } from "./Btns";
+import { ButtonPeach, ButtonWhite } from "./Btns";
 import { useWindowSize } from "@uidotdev/usehooks";
 
 export const DesignCards = ({ item }) => {
@@ -110,12 +110,12 @@ export const LocationCard = ({
   return (
     <div className="grid lg:grid-cols-3 md:gap-[30px]">
       <div
-        className={`lg:col-span-2 bg-extra-light-peach md:rounded-[15px] h-[320px] md:h-[326px] ${
+        className={`lg:col-span-2 bg-extra-light-peach md:rounded-[15px] min-h-[394px] md:min-h-[326px] ${
           width < 1023 && "order-last"
-        } flex flex-col lg:flex-row md:gap-x-24 items-end py-20 md:px-20`}
+        } flex flex-col md:flex-row md:gap-x-24 gap-y-6 items-center justify-center md:justify-start text-center md:text-left md:px-20`}
       >
         <div>
-          <h3 className="text-peach font-medium text-[32px] leading-9 md:text-[40px] md:leading-[48px] capitalize">
+          <h3 className="text-peach font-medium text-[32px] leading-9 mb-6 md:text-[40px] md:leading-[48px] capitalize">
             {title}
           </h3>
           <h4 className="font-bold text-[15px] leading-[25px] md:text-base md:leading-[26px] text-dark-gray capitalize">
@@ -126,6 +126,7 @@ export const LocationCard = ({
         </div>
 
         <div>
+          <div className="hidden md:block h-12 mb-6"></div>
           <h4 className="font-bold text-[15px] leading-[25px] md:text-base md:leading-[26px] text-dark-gray capitalize">
             contact
           </h4>
@@ -133,10 +134,30 @@ export const LocationCard = ({
           <p>M : {email}</p>
         </div>
       </div>
+
       <div
         style={{ backgroundImage: `url(${map})` }}
         className={`md:rounded-[15px] h-[320px] md:h-[326px] bg-no-repeat bg-cover bg-right-top ${orderDirection}`}
       ></div>
+    </div>
+  );
+};
+
+export const FooterCard = ({ title, description }) => {
+  return (
+    <div className="min-h-[380px] md:min-h-[320px] lg:min-h-[292px] bg-peach w-full rounded-[15px] flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 md:px-28 lg:px-24 gap-y-8">
+      <section className="text-center lg:text-left lg:max-w-[450px]">
+        <h2 className="font-medium text-[32px] md:text-[40px] leading-9 md:leading-none text-white mb-3 lg:mb-4">
+          Let's talk about
+          <br />
+          your project
+        </h2>
+        <p className="text-white text-[15px] md:text-base leading-[25px] md:leading-[26px]">
+          Ready to take it to the next level? Contact us today and find out how
+          our expertise can help your business grow.
+        </p>
+      </section>
+      <ButtonWhite title={"get in touch"} />
     </div>
   );
 };
