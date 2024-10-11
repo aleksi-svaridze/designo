@@ -11,8 +11,8 @@ export const Footer = () => {
     <footer
       className={`${
         location.pathname !== "/contact"
-          ? "pt-[250px] md:pt-40 lg:pt-[144px]"
-          : "pt-[70px]"
+          ? "pt-[250px] md:pt-40 lg:pt-[144px] mt-[300px] md:mt-[380px]"
+          : "pt-[70px] mt-[120px] lg:mt-40"
       } pb-[70px] bg-black`}
     >
       <div className="container px-6 md:px-10 xl:px-[85px] relative">
