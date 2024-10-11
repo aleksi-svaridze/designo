@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "../images/svgs/index";
 import { ButtonPeach, ButtonWhite } from "./Btns";
 import { useWindowSize } from "@uidotdev/usehooks";
+import scrollToTop from "../functions";
 
 export const DesignCards = ({ item }) => {
   return (
@@ -34,7 +35,8 @@ export const CategoriesCard = ({ url, title, img, lgHeight }) => {
           {title}
         </h2>
         <Link
-          to={url}
+          onClick={scrollToTop}
+          to={`/${url}`}
           className="font-medium text-white text-[15px] uppercase leading-[15px] tracking-[5px] flex items-center gap-x-[22px]"
         >
           view projects
@@ -52,7 +54,7 @@ export const CountryCard = ({ img, title, id }) => {
       <h3 className="text-dark-gray font-medium text-[20px] leading-[26px] uppercase mt-[48px] mb-[24px] tracking-[5px]">
         {title}
       </h3>
-      <ButtonPeach title="see location" />
+      <ButtonPeach title="see location" url="/locations" />
     </div>
   );
 };
@@ -143,7 +145,7 @@ export const LocationCard = ({
   );
 };
 
-export const FooterCard = ({ title, description }) => {
+export const FooterCard = () => {
   return (
     <div className="min-h-[380px] md:min-h-[320px] lg:min-h-[292px] bg-peach w-full rounded-[15px] flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 md:px-28 lg:px-24 gap-y-8">
       <section className="text-center lg:text-left lg:max-w-[450px]">
@@ -157,7 +159,7 @@ export const FooterCard = ({ title, description }) => {
           our expertise can help your business grow.
         </p>
       </section>
-      <ButtonWhite title={"get in touch"} />
+      <ButtonWhite title={"get in touch"} url="/contact" />
     </div>
   );
 };
