@@ -2,6 +2,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import LogoImage from "../images/logo.png";
 import { Facebook, Youtube, X, Pinterest, Instagram } from "../images/svgs";
 import { FooterCard } from "./Cards";
+import scrollToTop from "../functions";
 
 export const Footer = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <Link
+            onClick={scrollToTop}
             to="/"
             className="flex items-center justify-center md:justify-normal w-full md:w-auto gap-x-5 border-b border-white/10 md:border-0 mb-8 pb-8 md:mb-0 md:pb-0"
           >
@@ -32,18 +34,21 @@ export const Footer = () => {
 
           <nav className="text-white flex flex-col md:flex-row items-center md:items-start gap-y-8 md-gap-y-0 md:gap-x-[42px] uppercase text-sm leading-[14px] tracking-[2px]">
             <NavLink
+              onClick={scrollToTop}
               to="about"
               className={({ isActive }) => isActive && "border-b border-white"}
             >
               our company
             </NavLink>
             <NavLink
+              onClick={scrollToTop}
               to="locations"
               className={({ isActive }) => isActive && "border-b border-white"}
             >
               locations
             </NavLink>
             <NavLink
+              onClick={scrollToTop}
               to="contact"
               className={({ isActive }) => isActive && "border-b border-white"}
             >
