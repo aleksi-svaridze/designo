@@ -94,9 +94,11 @@ export const Contact = () => {
             send
           </button>
         </form>
-        <div className="absolute bottom-0 left-0 rounded-full w-[640px] h-[640px] bg-gradient-to-b from-[#5D0202]/0 to-[#5D0202]/15 -z-10"></div>
+        <div className="absolute -left-[80px] md:-left-[120px] lg:left-0 top-0 md:-top-[93px] lg:-top-[160px] rounded-full w-[292px] h-[292px] md:w-[640px] md:h-[640px] bg-gradient-to-t md:bg-gradient-to-r lg:bg-gradient-to-b from-[#5D0202]/0 to-[#5D0202]/15 -z-10"></div>
+        <div className="absolute -right-[129px] top-0 rounded-full w-[292px] h-[292px] bg-gradient-to-l from-[#5D0202]/0 to-[#5D0202]/15 -z-10 md:hidden"></div>
       </div>
-      <div className="grid gap-y-[48px] lg:grid-cols-3 my-[60px] lg:my-[80px]">
+
+      <div className="grid gap-y-[48px] lg:grid-cols-3 py-[120px] lg:py-40">
         {locationCardData.map((item) => (
           <CountryCard title={item.title} img={item.img} id={item.id} />
         ))}
