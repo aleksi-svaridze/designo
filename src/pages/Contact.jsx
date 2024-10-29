@@ -6,6 +6,8 @@ import AustraliaImage from "../images/cards/location-cards/australia.png";
 import UkImage from "../images/cards/location-cards/united-kingdom.png";
 import { useState } from "react";
 
+// TODO: Need form validation!
+
 export const Contact = () => {
   const [locationCardData] = useState([
     { id: 1, title: "canada", img: CanadaImage },
@@ -65,33 +67,49 @@ export const Contact = () => {
             required
             id="name"
             name="name"
-            className="h-10 mb-6 bg-transparent text-extra-light-peach focus:outline-none border-b-2 placeholder-extra-light-peach placeholder:text-[15px] placeholder:capitalize placeholder:leading-[26px] placeholder:font-medium pl-4"
+            className="
+            h-10 
+            mb-6 
+            bg-transparent 
+            focus:outline-none 
+            text-white 
+            border-b-[1px]
+            focus:border-b-[3px]
+            placeholder-extra-light-peach 
+            placeholder:text-[15px] 
+            placeholder:capitalize 
+            placeholder:leading-[26px] 
+            placeholder:font-medium pl-4
+            "
           />
           <input
             type="email"
             placeholder="Email Address"
             required
             name="email"
-            className="h-10 mb-6 bg-transparent text-extra-light-peach focus:outline-none border-b-2 placeholder-extra-light-peach placeholder:text-[15px] placeholder:capitalize placeholder:leading-[26px] placeholder:font-medium pl-4"
+            className="h-10 mb-6 bg-transparent focus:outline-none text-white 
+            border-b-[1px] focus:border-b-[3px] placeholder-extra-light-peach placeholder:text-[15px] placeholder:capitalize placeholder:leading-[26px] placeholder:font-medium pl-4"
           />
           <input
             type="number"
             placeholder="Phone"
             required
             name="phone"
-            className="h-10 mb-6 bg-transparent text-extra-light-peach focus:outline-none border-b-2 placeholder-extra-light-peach placeholder:text-[15px] placeholder:capitalize placeholder:leading-[26px] placeholder:font-medium pl-4"
+            className="h-10 mb-6 bg-transparent focus:outline-none text-white 
+            border-b-[1px] focus:border-b-[3px] placeholder-extra-light-peach placeholder:text-[15px] placeholder:capitalize placeholder:leading-[26px] placeholder:font-medium pl-4"
           />
           <textarea
             placeholder="your message"
             required
             name="message"
-            className="h-20 mb-6 bg-transparent text-extra-light-peach focus:outline-none border-b-2 placeholder-extra-light-peach placeholder:text-[15px] placeholder:capitalize placeholder:leading-[26px] placeholder:font-medium pl-4"
+            className="h-20 mb-6 bg-transparent focus:outline-none text-white 
+            border-b-[1px] focus:border-b-[3px] placeholder-extra-light-peach placeholder:text-[15px] placeholder:capitalize placeholder:leading-[26px] placeholder:font-medium pl-4"
           ></textarea>
           <button
             type="submit"
             className={`hover:text-white hover:bg-light-peach h-14 rounded-lg bg-white text-[15px] font-medium uppercase tracking-[1px]  inline-flex items-center justify-center px-6 min-w-[152px] self-center md:self-end transition easy-in-out duration-200`}
           >
-            send
+            submit
           </button>
         </form>
         <div className="absolute -left-[80px] md:-left-[120px] lg:left-0 top-0 md:-top-[93px] lg:-top-[160px] rounded-full w-[292px] h-[292px] md:w-[640px] md:h-[640px] bg-gradient-to-t md:bg-gradient-to-r lg:bg-gradient-to-b from-[#5D0202]/0 to-[#5D0202]/15 -z-10"></div>
